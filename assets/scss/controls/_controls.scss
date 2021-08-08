@@ -1,0 +1,68 @@
+.huskycat-control {
+
+    &.huskycat-color-palettes-radio-control {
+
+        .huskycat-palette {
+
+            .huskycat-palette-input {
+
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+
+                &:checked ~ .huskycat-palette-wrapper {
+
+                    border-color: $color-focus-input;
+                    filter: grayscale( 0 );
+
+                    .huskycat-palette-color { 
+                        
+                        &:nth-of-type( 1 ) {
+
+                            flex-grow: 3;
+                        
+                        }
+                    
+                        &:nth-of-type( 2 ) {
+
+                            flex-grow: 2;
+                        
+                        }
+                    
+                        
+                    }
+
+
+                }
+
+            }
+
+            .huskycat-palette-wrapper {
+
+                @include flex;
+                height: 90px;
+                overflow: hidden;
+                border-radius: .3em;
+                border: 3px solid $color-border-input;
+                padding: 4px;
+                background: $color-background-input;
+                transition: filter, border-color $duration-short $ease-out-quint;
+                filter: grayscale( 0.25 );
+
+
+                .huskycat-palette-color {
+
+                    flex-grow: 1;
+                    transition: flex-grow $duration-medium $ease-out-quint;
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,37 @@
+.husky-single-color-collection {
+  display: none;
+}
+.husky-single-color-collection .husky-collection-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.husky-single-color-collection .husky-collection-input:checked ~ .husky-single-color-collection-wrapper {
+  border-color: "#0073aa";
+  filter: grayscale(0);
+}
+.husky-single-color-collection .husky-collection-input:checked ~ .husky-single-color-collection-wrapper .husky-collection-single-color:nth-of-type(1) {
+  flex-grow: 3;
+}
+.husky-single-color-collection .husky-collection-input:checked ~ .husky-single-color-collection-wrapper .husky-collection-single-color:nth-of-type(2) {
+  flex-grow: 2;
+}
+.husky-single-color-collection .husky-single-color-collection-wrapper {
+  height: 90px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 0.3em;
+  border: 3px solid "#dddddd";
+  padding: 4px;
+  background: "#ffffff";
+  transition: border-color 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+  filter: grayscale(1);
+}
+.husky-single-color-collection .husky-single-color-collection-wrapper .husky-collection-single-color {
+  flex-grow: 1;
+  transition: flex-grow 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+/*# sourceMappingURL=style.css.map */
