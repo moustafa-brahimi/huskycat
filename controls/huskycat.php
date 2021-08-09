@@ -6,13 +6,13 @@
  */
 
 
-if( class_exists( "WP_Customize_Control" ) && !class_exists( "Huskycat_Control" ) ):
+if( class_exists( 'WP_Customize_Control' ) && !class_exists( 'Huskycat_Control' ) ):
 
     class Huskycat_Control extends WP_Customize_Control {
 
         public function enqueue( ) {
                         
-            wp_enqueue_style( "huskycat-style" );
+            wp_enqueue_style( 'huskycat-style' );
 
         }
 

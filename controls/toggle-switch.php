@@ -1,19 +1,26 @@
 <?php 
 
-if( class_exists( "Huskycat_Control" )  && !class_exists( "Huskycat_Toggle_Switch" ) ):
+/**
+ * toggle switch control class
+ * @package Huskycat
+ * @since 0.0.1
+ * 
+ */
+
+if( class_exists( 'Huskycat_Control' )  && !class_exists( 'Huskycat_Toggle_Switch' ) ):
 
     class Huskycat_Toggle_Switch_Control extends Huskycat_Control {
 
-        public $type    =   "huskycat_toggle_switch";
+        public $type    =   'huskycat_toggle_switch';
 
         public function render_content() {
 
             $input_id_escaped           =   esc_attr( 'huskycat-' . $this->id );
 		    $description_id_escaped     =   esc_attr( 'huskycat-description-' . $this->id );
-            $describedby_attr           =   ( ! empty( $this->description ) ) ? ' aria-describedby="' . $description_id_escaped . '" ' : '';
+            $describedby_attr           =   ( !empty( $this->description )  ? sprintf( ' aria-describedby="%s" ', $description_id_escaped ) : '' );
             $label_escaped              =   esc_html( $this->label );
 
-            $output     =   "<div class='huskycat-control huskycat-toggle-switch-control'>";
+            $output     =   '<div class="huskycat-control huskycat-toggle-switch-control">';
 
             // label
 
@@ -21,7 +28,7 @@ if( class_exists( "Huskycat_Control" )  && !class_exists( "Huskycat_Toggle_Switc
 
                 $output .=   sprintf( 
                     
-                    "<label for='%s'><span class='customize-control-title'>%s</span></label>",
+                    '<label for="%s"><span class="customize-control-title">%s</span></label>',
                     $input_id_escaped,
                     $label_escaped
                 
@@ -35,7 +42,7 @@ if( class_exists( "Huskycat_Control" )  && !class_exists( "Huskycat_Toggle_Switc
 
                 $output .=  sprintf( 
                     
-                    "<span id='%s' class='description customize-control-description'>%s</span>", 
+                    '<span id="%s" class="description customize-control-description">%s</span>', 
                     $description_id_escaped,
                     esc_html( $this->description ),
                 
@@ -64,8 +71,8 @@ if( class_exists( "Huskycat_Control" )  && !class_exists( "Huskycat_Toggle_Switc
 
 
             
-            $output     .=  "</span>";
-            $output     .=  "</div>";
+            $output     .=  '</span>';
+            $output     .=  '</div>';
 
             print( $output );
 
