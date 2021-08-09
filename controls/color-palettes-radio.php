@@ -11,7 +11,6 @@ if( class_exists( 'Huskycat_Control' )  && !class_exists( 'Huskycat_Color_Collec
 
         public $type    =   'huskycat_color_palettes_radio';
         
-
         protected function render_content() {
 
             if( empty( $this->choices ) ) { return; }
