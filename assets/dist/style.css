@@ -1,0 +1,77 @@
+.huskycat-control.huskycat-color-palettes-radio-control .huskycat-palette .huskycat-palette-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.huskycat-control.huskycat-color-palettes-radio-control .huskycat-palette .huskycat-palette-input:checked ~ .huskycat-palette-wrapper {
+  border-color: #0073aa;
+  filter: grayscale(0);
+}
+.huskycat-control.huskycat-color-palettes-radio-control .huskycat-palette .huskycat-palette-input:checked ~ .huskycat-palette-wrapper .huskycat-palette-color:nth-of-type(1) {
+  flex-grow: 3;
+}
+.huskycat-control.huskycat-color-palettes-radio-control .huskycat-palette .huskycat-palette-input:checked ~ .huskycat-palette-wrapper .huskycat-palette-color:nth-of-type(2) {
+  flex-grow: 2;
+}
+.huskycat-control.huskycat-color-palettes-radio-control .huskycat-palette .huskycat-palette-wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  height: 90px;
+  overflow: hidden;
+  border-radius: 0.3em;
+  border: 3px solid #dddddd;
+  padding: 4px;
+  background: #ffffff;
+  transition: filter, border-color 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  filter: grayscale(0.25);
+}
+.huskycat-control.huskycat-color-palettes-radio-control .huskycat-palette .huskycat-palette-wrapper .huskycat-palette-color {
+  flex-grow: 1;
+  transition: flex-grow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.huskycat-control.huskycat-toggle-switch-control .huskycat-toggle-switch-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.huskycat-control.huskycat-toggle-switch-control .huskycat-toggle-switch-input:checked + .huskycat-toggle label {
+  border-color: #0073aa;
+  background-color: #0073aa;
+}
+.huskycat-control.huskycat-toggle-switch-control .huskycat-toggle-switch-input:checked + .huskycat-toggle label .toggle-ball {
+  background-color: #ffffff;
+  transform: translateX(calc( 50px - 6px - 16px ));
+}
+.huskycat-control.huskycat-toggle-switch-control .huskycat-toggle label {
+  width: 50px;
+  height: 25px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  transition: background-color 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  border: 3px solid #dddddd;
+}
+.huskycat-control.huskycat-toggle-switch-control .huskycat-toggle label .toggle-ball {
+  height: 16px;
+  width: 16px;
+  background-color: #0073aa;
+  border-radius: 10px;
+  position: absolute;
+  transform: translateX(6px);
+  transition: background-color, transform 0.5s cubic-bezier(0.36, 0, 0.66, -0.56);
+}
+
+/*# sourceMappingURL=style.css.map */

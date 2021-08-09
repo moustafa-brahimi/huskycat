@@ -1,0 +1,26 @@
+{
+  "name": "huskycat",
+  "version": "0.0.1",
+  "description": "Huskycat is a collection of custom Wordpress customizer controls, and helpers",
+  "main": "index.php",
+  "scripts": {
+    "build-css": "node_modules/.bin/sass ./assets/src/scss/style.scss ./assets/dist/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brahimi-mustapha/huskycat.git"
+  },
+  "keywords": [
+    "wordpress",
+    "framework"
+  ],
+  "author": "mustapha brahimi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brahimi-mustapha/huskycat/issues"
+  },
+  "homepage": "https://github.com/brahimi-mustapha/huskycat#readme",
+  "devDependencies": {
+    "sass": "^1.37.5"
+  }
+}

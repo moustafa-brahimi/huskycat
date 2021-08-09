@@ -1,0 +1,16 @@
+// wordpress standard colors
+
+$color-background-input:#ffffff;
+$color-border-input:    #dddddd;
+$color-focus-input:     #0073aa;
+
+// easing functions
+
+$ease-out-quint :   cubic-bezier(0.22, 1, 0.36, 1);
+$ease-in-back   :   cubic-bezier(0.36, 0, 0.66, -0.56);
+
+// transition duration
+
+$duration-short :   0.25s;
+$duration-medium:   0.5s;
+$duration-long  :   0.75s; 

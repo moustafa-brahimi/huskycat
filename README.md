@@ -1,2 +1,2 @@
 # huskycat
-huskycat is a collection of custom Wordpress customizer controls
+Huskycat is a collection of custom Wordpress customizer controls, and helpers

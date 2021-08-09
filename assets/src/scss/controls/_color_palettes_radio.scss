@@ -1,0 +1,136 @@
+.huskycat-control {
+
+    &.huskycat-color-palettes-radio-control {
+
+        .huskycat-palette {
+
+            .huskycat-palette-input {
+
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+
+                &:checked ~ .huskycat-palette-wrapper {
+
+                    border-color: $color-focus-input;
+                    filter: grayscale( 0 );
+
+                    .huskycat-palette-color { 
+                        
+                        &:nth-of-type( 1 ) {
+
+                            flex-grow: 3;
+                        
+                        }
+                    
+                        &:nth-of-type( 2 ) {
+
+                            flex-grow: 2;
+                        
+                        }
+                    
+                        
+                    }
+
+
+                }
+
+            }
+
+            .huskycat-palette-wrapper {
+
+                @include flex;
+                height: 90px;
+                overflow: hidden;
+                border-radius: .3em;
+                border: 3px solid $color-border-input;
+                padding: 4px;
+                background: $color-background-input;
+                transition: filter, border-color $duration-short $ease-out-quint;
+                filter: grayscale( 0.25 );
+
+
+                .huskycat-palette-color {
+
+                    flex-grow: 1;
+                    transition: flex-grow $duration-medium $ease-out-quint;
+
+                }
+
+            }
+
+        }
+
+    }
+
+    &.huskycat-toggle-switch-control {
+
+        .huskycat-toggle-switch-input {
+
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+
+
+            &:checked {
+
+                & + .huskycat-toggle {
+
+                    label {
+
+                        border-color: $color-focus-input;
+                        background-color: $color-focus-input;
+
+                        .toggle-ball {
+
+                            background-color: $color-background-input;
+                            transform: translateX( calc( 50px - 6px - 16px ) );
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        .huskycat-toggle {
+
+            label {
+
+                width: 50px;
+                height: 25px;
+                border-radius: 30px;
+                box-sizing: border-box;
+                @include flex;
+                align-items: center;
+                background-color: $color-background-input;
+                transition: background-color $duration-short $ease-out-quint;
+                border: 3px solid $color-border-input;
+
+
+                .toggle-ball {
+
+                    height: 16px;
+                    width: 16px;
+                    background-color: $color-focus-input;
+                    border-radius: 10px;
+                    position: absolute;
+                    transform: translateX( 6px );
+                    transition: background-color, transform $duration-medium $ease-in-back;
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
