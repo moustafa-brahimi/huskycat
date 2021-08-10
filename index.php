@@ -10,6 +10,7 @@
 require_once ( plugin_dir_path( __FILE__ ) . "controls/huskycat.php" );
 require_once ( plugin_dir_path( __FILE__ ) . "controls/color-palettes-radio.php" );
 require_once ( plugin_dir_path( __FILE__ ) . "controls/toggle-switch.php" );
+require_once ( plugin_dir_path( __FILE__ ) . "controls/images-radio.php" );
 
 
 // helpers.

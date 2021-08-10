@@ -21,11 +21,11 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  height: 90px;
+  height: 60px;
   overflow: hidden;
   border-radius: 0.3em;
   border: 3px solid #dddddd;
-  padding: 4px;
+  padding: 3px;
   background: #ffffff;
   transition: filter, border-color 0.25s cubic-bezier(0.22, 1, 0.36, 1);
   filter: grayscale(0.25);
@@ -34,6 +34,7 @@
   flex-grow: 1;
   transition: flex-grow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
 .huskycat-control.huskycat-toggle-switch-control .huskycat-toggle-switch-input {
   position: absolute;
   opacity: 0;
@@ -72,6 +73,38 @@
   position: absolute;
   transform: translateX(6px);
   transition: background-color, transform 0.5s cubic-bezier(0.36, 0, 0.66, -0.56);
+}
+
+.huskycat-control.huskycat-images-radio-control .huskycat-image-option {
+  display: inline-block;
+  max-width: 33.33%;
+  padding: 3px;
+  box-sizing: border-box;
+}
+.huskycat-control.huskycat-images-radio-control .huskycat-image-option .huskycat-image-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.huskycat-control.huskycat-images-radio-control .huskycat-image-option .huskycat-image-input:checked ~ .huskycat-image-wrapper {
+  border-color: #0073aa;
+}
+.huskycat-control.huskycat-images-radio-control .huskycat-image-option .huskycat-image-wrapper {
+  display: inline-block;
+  max-width: 100%;
+  max-height: 60px;
+  overflow: hidden;
+  box-sizing: border-box;
+  align-items: center;
+  border: 3px solid #dddddd;
+  transition: border-color 0.25s cubic-bezier(0.22, 1, 0.36, 1), transform 100ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.huskycat-control.huskycat-images-radio-control .huskycat-image-option .huskycat-image-wrapper img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */

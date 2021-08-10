@@ -42,11 +42,11 @@
             .huskycat-palette-wrapper {
 
                 @include flex;
-                height: 90px;
+                height: 60px;
                 overflow: hidden;
                 border-radius: .3em;
                 border: 3px solid $color-border-input;
-                padding: 4px;
+                padding: 3px;
                 background: $color-background-input;
                 transition: filter, border-color $duration-short $ease-out-quint;
                 filter: grayscale( 0.25 );
