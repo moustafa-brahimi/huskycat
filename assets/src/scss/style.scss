@@ -3,8 +3,184 @@
 
 @import "./mixins";
 
-@import "./controls/color_palettes_radio";
+@import "./controls/radio_palettes";
 
-@import "./controls/toggle_switch";
+@import "./controls/switch_toggle";
 
-@import "./controls/images_radio"
+@import "./controls/radio_images";
+
+@import "./controls/select_typography";
+
+
+
+// .huskycat-control {
+
+	.select2-container {
+	  font-size: .9em;
+
+	  .select2-dropdown {
+	  	z-index: 900000 !important;
+	  }
+	
+	&--default {
+
+		&.select2-container--open {
+
+			&.select2-container--below {
+
+				.select2-selection {
+
+					&--single, &--multiple {
+						border-bottom: 0px;
+					}
+
+				}
+
+			}
+
+
+			&.select2-container--above {
+
+				.select2-selection {
+
+					&--single, &--multiple {
+						border-top: 0px;
+					}
+
+				}
+
+			}
+
+		}
+
+		.select2-selection {
+
+			&--single {
+
+				.select2-selection__arrow b {
+
+					height: 8px;
+					width: 8px;
+					left: calc( 50% - 4px );
+					position: absolute;
+					top: calc( 50% - 1px );
+					background-image: url( "../images/arrow.svg" );
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position: center;
+					border: none;
+
+				}
+
+			}
+
+		}
+
+		.select2-results__option--highlighted.select2-results__option--selectable {
+
+			background-color: $color-focus-input;
+
+		}
+
+	}
+
+	}
+
+	.select2-search {
+		display: flex;
+		border: 0;
+		padding: 8px;
+		position: relative;
+		align-items: center;
+
+		// search icon
+
+		&:focus-within {
+
+			&::before {
+				opacity: .5;
+				border-color: $color-focus-input;
+			}
+			&::after {
+				opacity: .5;
+				background-color: $color-focus-input;
+			}
+
+		}
+
+		&::before {
+			content: "";
+			height: 6px;
+			width: 6px;
+			position: absolute;
+			border: 2px solid #000;
+			opacity: .2;
+			border-radius: 50%;
+			right: 20px;
+			transform: translateY(-1px);
+			transition: all .5 ease;
+		}
+
+		&::after {
+			content: "";
+			height: 4px;
+			width: 2px;
+			position: absolute;
+			background-color: #000;
+			opacity: .2;
+			right: 20px;
+			transform: translate(0.5px, 4px) rotate(-40deg);
+			transition: all .5 ease;
+		}
+
+		&__field {
+			height: 25px;
+			transition: all .5s ease;
+			min-height: unset !important;
+			padding: 5px;
+
+			&:focus {
+				border-color: $color-focus-input !important;
+				box-shadow: none !important;
+				outline: none !important;
+			}
+		
+		}
+
+
+	}
+
+	.select2-results {
+
+		&__options {
+			padding: 0 8px 8px;
+
+		
+		}
+
+		&__option {
+			padding: 6px 12px;
+			border-bottom: 1px solid #eee;
+			margin: 0;
+		
+			&:not( &--disabled ):last-of-type {
+				border-bottom: 0;
+			}
+
+			&--selected {
+				font-weight: bold;
+			}
+
+			&--disabled {
+				display: none;
+			}
+			
+			&:last-of-type {
+				border-bottom: 0;
+			}
+		
+		}
+
+	}
+
+// }

@@ -1,0 +1,57 @@
+.huskycat-control {
+
+  &.toggle {
+
+    .toggle__input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      &:checked {
+
+        & + .toggle__container {
+
+          .toggle__label {
+            border-color: $color-focus-input;
+            background-color: var(--wp-admin-theme-color-darker-20);
+          }
+
+          .toggle__hero {
+            background-color: $color-background-input;
+            transform: translateX( calc( 50px - 6px - 16px - 3px ) );
+          }
+
+        }
+
+      }
+
+    }
+
+    .toggle__hero {
+      height: 16px;
+      width: 16px;
+      background-color: $color-focus-input;
+      border-radius: 10px;
+      position: absolute;
+      transform: translateX( 3px );
+      transition: background-color, transform $duration-medium $ease-in-back;
+    }
+
+
+    .toggle__label {
+      width: 50px;
+      height: 25px;
+      border-radius: 30px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      background-color: $color-background-input;
+      transition: background-color $duration-short $ease-out-quint;
+      border: 3px solid $color-border-input;
+    }
+
+  }
+
+}

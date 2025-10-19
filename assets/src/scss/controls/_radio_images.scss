@@ -1,0 +1,48 @@
+.huskycat-control {
+
+  &.images-radio {
+
+    .images-radio__choice {
+      display: inline-block;
+      max-width: 33.33%;
+      padding: 3px;
+      box-sizing: border-box;
+    }
+
+    .images-radio__input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      &:checked ~  {
+
+        .images-radio__wrapper {
+          border-color: $color-focus-input;
+        }
+
+      }
+        
+    }
+
+    .images-radio__wrapper {
+      display: inline-block;
+      max-width: 100%;
+      max-height: 60px;
+      overflow: hidden;
+      box-sizing: border-box;
+      align-items: center;
+      border: 3px solid $color-border-input;
+      transition: border-color $duration-short $ease-out-quint, transform 100ms $ease-out-quint;
+    }
+
+    .images-radio__image {
+      max-width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+  }
+
+}

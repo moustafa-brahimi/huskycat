@@ -4,7 +4,8 @@
   "description": "Huskycat is a collection of custom Wordpress customizer controls, and helpers",
   "main": "index.php",
   "scripts": {
-    "build-css": "node_modules/.bin/sass ./assets/src/scss/style.scss ./assets/dist/style.css --watch"
+    "build-css": "node_modules/.bin/sass ./assets/src/scss/style.scss ./assets/dist/css/style.css --watch",
+    "build-js": "node_modules/.bin/webpack -w"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,14 @@
   },
   "homepage": "https://github.com/brahimi-mustapha/huskycat#readme",
   "devDependencies": {
-    "sass": "^1.37.5"
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "sass": "^1.37.5",
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "select2": "^4.1.0-rc.0"
   }
 }

@@ -1,0 +1,53 @@
+.huskycat-control {
+
+  &.palettes-radio {
+    
+    .palette {
+
+      &__input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked ~ .palette__wrapper {
+          border-color: $color-focus-input;
+          filter: grayscale( 0 );
+
+          .palette__color { 
+
+            &:nth-of-type( 1 ) { flex-grow: 3; }
+            &:nth-of-type( 2 ) { flex-grow: 2; }
+                
+          }
+
+        }
+
+      }
+
+      &__wrapper {
+        display: flex;
+        height: 60px;
+        overflow: hidden;
+        border-radius: .3em;
+        border: 3px solid $color-border-input;
+        padding: 3px;
+        background: $color-background-input;
+        transition: filter, border-color $duration-short $ease-out-quint;
+        filter: grayscale( 0.25 );
+      }
+
+
+      &__color {
+
+        flex-grow: 1;
+        transition: flex-grow $duration-medium $ease-out-quint;
+
+      }
+
+    }
+
+  }
+
+}
